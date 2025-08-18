@@ -1,4 +1,4 @@
-name: vulnerable-c-and-cpp
+ncyname: vulnerable-c-and-cpp
 
 on:
   push:
@@ -88,9 +88,13 @@ jobs:
         run: |
           jf rt u ./program2.app mikeho-vul-c-and-cpp-conan-local/program2/
 
-      - name: Publish Build with Module
+      - name: Publish Build with Dependency
         run: |
           jf rt build-collect-env 
           jf rt build-add-git 
           jf rt build-publish 
+
+      - name: Xray Build Security Scan
+        run: |            
+          jf build-scan --fail=false --vuln
           
