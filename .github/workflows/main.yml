@@ -1,4 +1,4 @@
-ncyname: vulnerable-c-and-cpp
+name: vulnerable-c-and-cpp
 
 on:
   push:
