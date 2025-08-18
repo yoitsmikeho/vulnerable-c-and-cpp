@@ -45,7 +45,7 @@ jobs:
 
       - name: Build program1.app
         run: |
-          docker run --rm -v $(pwd):/src -w /src -c "gcc program1.c -o program1.app"
+          docker run --rm -v $(pwd):/src -w /src /bin/bash -c "gcc program1.c -o program1.app"
 
       - name: Upload program1.app
         run: |
@@ -80,7 +80,7 @@ jobs:
 
       - name: Build program2.app
         run: |
-          docker run --rm -v $(pwd):/src -w /src -c "gcc program2.c -o program2.app"
+          docker run --rm -v $(pwd):/src -w /src /bin/bash -c "gcc program2.c -o program2.app"
 
       - name: Upload program2.app
         run: |
