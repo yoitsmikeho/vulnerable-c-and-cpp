@@ -35,6 +35,7 @@ jobs:
           oidc-provider-name: mikeho-github
           oidc-audience: mikeho-audience
           version: 2.77.0
+          disable-auto-build-publish: true
 
       - name: Docker Authenticate
         uses: docker/login-action@v3
@@ -73,6 +74,7 @@ jobs:
           oidc-provider-name: mikeho-github
           oidc-audience: mikeho-audience
           version: 2.77.0
+          disable-auto-build-publish: true
 
       - name: Download program1.app
         run: |
