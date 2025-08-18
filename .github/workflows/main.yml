@@ -85,4 +85,10 @@ jobs:
       - name: Upload program2.app
         run: |
           jf rt u ./program2.app mikeho-vul-c-and-cpp-conan-local/program2/
+
+      - name: Publish Build with Module
+        run: |
+          jf rt build-collect-env 
+          jf rt build-add-git 
+          jf rt build-publish 
           
