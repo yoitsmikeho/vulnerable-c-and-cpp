@@ -46,7 +46,7 @@ jobs:
 
       - name: Build program1.app
         run: |
-          docker run --rm -v $(pwd):/src -w /src gcc:12.5.0 /bin/bash -c "gcc program1.c -o program1.app"
+          docker run --rm -v $(pwd):/src -w /src ${{ vars.JF_URL }}/mikeho-github-docker-local/gcc:12.5.0 /bin/bash -c "gcc program1.c -o program1.app"
 
       - name: Upload program1.app
         run: |
@@ -82,7 +82,7 @@ jobs:
 
       - name: Build program2.app
         run: |
-          docker run --rm -v $(pwd):/src -w /src gcc:12.5.0 /bin/bash -c "gcc program2.c -o program2.app"
+          docker run --rm -v $(pwd):/src -w /src ${{ vars.JF_URL }}/mikeho-github-docker-local/gcc:12.5.0 /bin/bash -c "gcc program2.c -o program2.app"
 
       - name: Upload program2.app
         run: |
